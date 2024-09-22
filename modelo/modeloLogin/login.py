@@ -19,9 +19,10 @@ def inicioSesion():
                 print("¡Acceso concedido!")
                 return True  
             else:
+                print("\n"*13)
                 print("Contraseña incorrecta.")
                 return False  
-
+    print("\n"*13)
     print("Usuario no encontrado.")
     return False  
 
