@@ -1,22 +1,8 @@
 import json
 from persistencia.persisLogin.perLogin import cargarDatosLogin, incriptar
+from utils.validacion import leerUsuario
 
 rutaDatosLogin = "datos\\credenciales.json"
-
-
-def leerUsuario():
-    while True:
-        try:
-            nombre = input("Ingrese su nombre de usuario: ").strip()
-            
-            if len(nombre) == 0:
-                print(">>> ERROR. Usuario invalido")
-                continue
-            return nombre
-
-        except Exception as e:
-            print("Error al ingresar el nombre.\n" + e)
-
 
 def cambiarContrasena():
     # Cargar las credenciales del JSON
@@ -29,6 +15,7 @@ def cambiarContrasena():
         usuJson = datos.get("usuario")
 
         if usuIngre == usuJson:
+            
             nuevaContra = input("Ingrese su nueva contraseña: ")
             confirmacionContra = input("Confirme su nueva contraseña: ")
 

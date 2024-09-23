@@ -3,31 +3,35 @@ from modelo.modeloLogin.actualizarContrasena import cambiarContrasena
 from interfaz.inicio import inicio
 from interfaz.fin import fin
 from interfaz.inmenu import menu
+from modelo.modeloGrupo.grupo import registrarGrupo
+from modelo.modeloModulo.modulo import registrarModulo
+from modelo.modeloEstudiantes.estudiantes import registrarEstudiante
+from modelo.modeloProfesores.profesor import registrarProfesor
 
+# inicio()
+# print("\n"*13)
+# permiso = False
 
-inicio()
-print("\n"*13)
-permiso = False
-
+# while True:
+#     print("Usuario    --->  'admin' ")
+#     print("Contraseña --->  'SISGESA'")
+#     permiso = inicioSesion()
+#     if permiso:
+#         break
+    
+#cambiar True por permiso    
 while True:
-    print("Usuario    --->  'admin' ")
-    print("Contraseña --->  'SISGESA'")
-    permiso = inicioSesion()
-    if permiso:
-        break
-       
-while permiso:
     
     op = menu()
     match op:
         case 1:
-           pass
+            registrarGrupo()
         case 2:
-            pass
+            registrarModulo()
         case 3:
-            pass
+            registrarEstudiante()
         case 4:
-           pass
+            registrarProfesor()
         case 5:
             pass
         case 6:
@@ -35,7 +39,7 @@ while permiso:
         case 7:
            pass
         case 8:
-            pass
+            cambiarContrasena()
         case 9:
             fin()
             
