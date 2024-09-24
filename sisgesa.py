@@ -3,12 +3,14 @@ from modelo.modeloLogin.actualizarContrasena import cambiarContrasena
 from interfaz.inicio import inicio
 from interfaz.fin import fin
 from interfaz.inmenu import menu
+from interfaz.submenuAsistencia import menuAsis
 from modelo.modeloEntidades.grupo import registrarGrupo
 from modelo.modeloEntidades.modulo import registrarModulo
 from modelo.modeloEntidades.estudiantes import registrarEstudiante
 from modelo.modeloEntidades.profesor import registrarProfesor
-from modelo.modeloasignar.estudianteGrupo import asignarEstudianteGrupo
-from modelo.modeloasignar.estudianteModulo import asignarEstudianteModulo
+from modelo.modeloAsignar.estudianteGrupo import asignarEstudianteGrupo
+from modelo.modeloAsignar.estudianteModulo import asignarEstudianteModulo
+from modelo.modeloAsistencia.asistencia import tomarAsistencia, tomarSalida
 
 # inicio()
 # print("\n"*13)
@@ -86,7 +88,16 @@ while True:
                 elif otro == "n":
                     p = False
         case 7:
-           pass
+            while True:
+                 op1 = menuAsis()
+                 match op1:
+                    case 1:
+                        tomarAsistencia() 
+                    case 2:
+                        tomarSalida()
+                    case 3:
+                         break
+                         
         case 8:
             cambiarContrasena()
         case 9:
