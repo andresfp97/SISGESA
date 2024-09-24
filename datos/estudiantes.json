@@ -1,8 +1,36 @@
 [
     {
-        "codigo": "1151726",
-        "nombre": "andres",
+        "codigo": "1",
+        "nombre": "andres portilla",
         "sexo": "m",
-        "edad": 27
+        "edad": 27,
+        "grupo": "c6",
+        "modulos": [
+            "fp01",
+            "pa01",
+            "lp01"
+        ]
+    },
+    {
+        "codigo": "2",
+        "nombre": "jinder arias",
+        "sexo": "m",
+        "edad": 18,
+        "grupo": "c5",
+        "modulos": [
+            "fp01",
+            "lp01",
+            "ib01"
+        ]
+    },
+    {
+        "codigo": "3",
+        "nombre": "oscar lopez",
+        "sexo": "m",
+        "edad": 24,
+        "grupo": "c4",
+        "modulos": [
+            "fp01"
+        ]
     }
 ]

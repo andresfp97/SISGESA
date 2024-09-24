@@ -23,10 +23,11 @@ def registrarModulo():
     modulo = {
         'codigo': codigo,
         'nombre': nombre,
-        'duracionSemanas': duraSemanas
+        'duracionSemanas': duraSemanas,
+        'estudiantes': []
+        
     }
 
-    # Guardar grupo
+    # Guardar modulo
     guardarModulo(modulo)
     print(f"Modulo  '{nombre}' registrado exitosamente.")
-    input("Enter para volver al menu :)")

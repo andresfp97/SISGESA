@@ -25,10 +25,10 @@ def registrarGrupo():
     grupo = {
         'codigo': codigo,
         'nombre': nombre,
-        'marca': marca
+        'marca': marca,
+        "estudiantes": []
     }
 
     # Guardar grupo
     guardarGrupo(grupo)
     print(f"Grupo '{nombre}' registrado exitosamente.")
-    input("Enter para volver al menu :)")

@@ -18,4 +18,4 @@ def registrarProfesor():
     # Guardar estudante
     guardarProfesor(profesor)
     print(f"Profesor '{nombre}' registrado exitosamente.")
-    input("Enter para volver al menu :)")
+   

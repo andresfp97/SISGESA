@@ -11,13 +11,16 @@ def registrarEstudiante():
     edad = leerEdad()
 
     estudiante  = {
+        
         'codigo': codigo,
         'nombre': nombre,
         'sexo': sexo,
-        'edad': edad
+        'edad': edad,
+        'grupo': None,
+        'modulos': []
+        
     }
 
-    # Guardar estudante
+    # Guardar estudiante
     guardarEstudiante(estudiante)
     print(f"Estudiante '{nombre}' registrado exitosamente.")
-    input("Enter para volver al menu :)")

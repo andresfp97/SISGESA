@@ -1,12 +1,26 @@
 [
     {
-        "codigo": "y3",
-        "nombre": "grupo y3",
-        "marca": "gy3"
+        "codigo": "c4",
+        "nombre": "grupoc4",
+        "marca": "gc4",
+        "estudiantes": [
+            "3"
+        ]
     },
     {
-        "codigo": "y2",
-        "nombre": "grupo y2",
-        "marca": "gy2"
+        "codigo": "c5",
+        "nombre": "grupoc5",
+        "marca": "gc5",
+        "estudiantes": [
+            "2"
+        ]
+    },
+    {
+        "codigo": "c6",
+        "nombre": "grupoc6",
+        "marca": "gc5",
+        "estudiantes": [
+            "1"
+        ]
     }
 ]
