@@ -1,4 +1,4 @@
-from persistencia.persisEstudiante.perEstudiante import guardarEstudiante
+from persistencia.persistenciaEntidades.perEstudiante import guardarEstudiante
 from utils.validacion import leerUsuario, leerCodigo, leerEdad, leerSexo
 
 def registrarEstudiante():

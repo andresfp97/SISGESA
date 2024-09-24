@@ -1,4 +1,4 @@
-from persistencia.persisProfesor.perProfesor import guardarProfesor
+from persistencia.persistenciaEntidades.perProfesor import guardarProfesor
 from utils.validacion import leerUsuario, leerCodigo
 
 def registrarProfesor():

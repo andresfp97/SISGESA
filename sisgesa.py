@@ -3,10 +3,10 @@ from modelo.modeloLogin.actualizarContrasena import cambiarContrasena
 from interfaz.inicio import inicio
 from interfaz.fin import fin
 from interfaz.inmenu import menu
-from modelo.modeloGrupo.grupo import registrarGrupo
-from modelo.modeloModulo.modulo import registrarModulo
-from modelo.modeloEstudiantes.estudiantes import registrarEstudiante
-from modelo.modeloProfesores.profesor import registrarProfesor
+from modelo.modeloEntidades.grupo import registrarGrupo
+from modelo.modeloEntidades.modulo import registrarModulo
+from modelo.modeloEntidades.estudiantes import registrarEstudiante
+from modelo.modeloEntidades.profesor import registrarProfesor
 from modelo.modeloasignar.estudianteGrupo import asignarEstudianteGrupo
 from modelo.modeloasignar.estudianteModulo import asignarEstudianteModulo
 

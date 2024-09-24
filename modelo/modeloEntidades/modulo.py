@@ -1,4 +1,4 @@
-from persistencia.persisModulo.perModulo import guardarModulo
+from persistencia.persistenciaEntidades.perModulo import guardarModulo
 from utils.validacion import leerUsuario, leerCodigo
 
 def leerDuracionSemanas():

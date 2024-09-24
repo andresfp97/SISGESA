@@ -1,4 +1,4 @@
-from persistencia.persisGrupo.perGrupo import guardarGrupo
+from persistencia.persistenciaEntidades.perGrupo import guardarGrupo
 from utils.validacion import leerUsuario, leerCodigo
 
 def leerMarca():
