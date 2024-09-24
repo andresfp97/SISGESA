@@ -1,5 +1,7 @@
 from persistencia.persistenciaEntidades.perModulo import guardarModulo
 from utils.validacion import leerUsuario, leerCodigo
+from persistencia.persistenciaEntidades.perProfesor import obtenerProfesor
+from modelo.modeloEntidades.profesor import registrarProfesor
 
 def leerDuracionSemanas():
     while True:
@@ -19,13 +21,23 @@ def registrarModulo():
     codigo = leerCodigo()
     nombre = leerUsuario()
     duraSemanas = leerDuracionSemanas()
-
+    
+    parar = True
+    lst = []
+    while parar:
+        profesor = registrarProfesor()
+        lst.append(profesor)
+        otro = input("¿quiere ingresar otro estudiante? (s/n): ").strip().lower()
+        if otro == "s":
+            parar = True
+        if otro == "n":
+             parar = False
     modulo = {
         'codigo': codigo,
         'nombre': nombre,
         'duracionSemanas': duraSemanas,
-        'estudiantes': []
-        
+        'estudiantes': [],
+        'profesores': lst    
     }
 
     # Guardar modulo

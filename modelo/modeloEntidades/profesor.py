@@ -6,16 +6,14 @@ def registrarProfesor():
     print("=== Registro de Profesores ===")
     print("ingrese la cedula del profesor a registar")
     codigo = leerCodigo()
-    nombre = leerUsuario()
-    
-
+    nombre = leerUsuario()   
+          
     profesor  = {
         'codigo': codigo,
         'nombre': nombre,
-        
     }
-
+        
     # Guardar estudante
     guardarProfesor(profesor)
     print(f"Profesor '{nombre}' registrado exitosamente.")
-   
+    return profesor

@@ -76,7 +76,7 @@ def tomarAsistencia():
     print(f"Asistencia completada para el módulo {codigo_modulo} en la fecha {fecha_actual}.")
 
 
-    
+# Función para registrar la salida  de varios estudiantes en un mismo módulo 
 def tomarSalida():
     # Ingresar el módulo solo una vez
     codigo_modulo = input("Ingrese el código del módulo para registrar salidas: ")

@@ -7,7 +7,8 @@ rutaDatosAsistencia = 'datos/asistencia.json'
 def guardar_asistencia(asistencias):
     with open(rutaDatosAsistencia, 'w') as file:
         json.dump(asistencias, file, indent=4)
- # Función para cargar los registros de asistencia       
+ # Función para cargar los registros de asistencia   
+     
 def cargar_asistencia():
     if os.path.exists(rutaDatosAsistencia):
         try:

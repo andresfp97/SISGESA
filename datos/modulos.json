@@ -1,37 +1,18 @@
 [
     {
-        "codigo": "fp01",
-        "nombre": "fundamentos de programacion",
-        "duracionSemanas": 1,
-        "estudiantes": [
-            "1",
-            "2",
-            "3"
-        ]
-    },
-    {
-        "codigo": "pa01",
-        "nombre": "pensamiento algoritmico",
-        "duracionSemanas": 1,
-        "estudiantes": [
-            "1"
-        ]
-    },
-    {
-        "codigo": "lp01",
-        "nombre": "lenguaje python",
-        "duracionSemanas": 1,
-        "estudiantes": [
-            "1",
-            "2"
-        ]
-    },
-    {
-        "codigo": "ib01",
-        "nombre": "ingles bebe",
-        "duracionSemanas": 10,
-        "estudiantes": [
-            "2"
+        "codigo": "1",
+        "nombre": "fp123",
+        "duracionSemanas": 4,
+        "estudiantes": [],
+        "profesores": [
+            {
+                "codigo": "1",
+                "nombre": "marcela perez"
+            },
+            {
+                "codigo": "2",
+                "nombre": "warllen romero"
+            }
         ]
     }
 ]
