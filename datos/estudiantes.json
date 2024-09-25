@@ -1,36 +1,102 @@
 [
     {
-        "codigo": "1",
-        "nombre": "andres portilla",
+        "codigo": "e1",
+        "nombre": "Andr\u00c3\u00a9s Perez",
         "sexo": "m",
         "edad": 27,
-        "grupo": "c6",
+        "grupo": "a1",
         "modulos": [
-            "fp01",
-            "pa01",
-            "lp01"
+            "m1"
         ]
     },
     {
-        "codigo": "2",
-        "nombre": "jinder arias",
-        "sexo": "m",
-        "edad": 18,
-        "grupo": "c5",
+        "codigo": "e2",
+        "nombre": "Mar\u00c3\u00ada L\u00c3\u00b3pez",
+        "sexo": "f",
+        "edad": 22,
+        "grupo": "a1",
         "modulos": [
-            "fp01",
-            "lp01",
-            "ib01"
+            "m1"
         ]
     },
     {
-        "codigo": "3",
-        "nombre": "oscar lopez",
+        "codigo": "e3",
+        "nombre": "Carlos Jim\u00c3\u00a9nez",
         "sexo": "m",
         "edad": 24,
-        "grupo": "c4",
+        "grupo": "a1",
         "modulos": [
-            "fp01"
+            "m1"
+        ]
+    },
+    {
+        "codigo": "e4",
+        "nombre": "Sof\u00c3\u00ada Castro",
+        "sexo": "f",
+        "edad": 23,
+        "grupo": "a1",
+        "modulos": [
+            "m2"
+        ]
+    },
+    {
+        "codigo": "e5",
+        "nombre": "Juan Mart\u00c3\u00adn",
+        "sexo": "m",
+        "edad": 26,
+        "grupo": "a1",
+        "modulos": [
+            "m2"
+        ]
+    },
+    {
+        "codigo": "e6",
+        "nombre": "Ana Rivera",
+        "sexo": "f",
+        "edad": 21,
+        "grupo": "a1",
+        "modulos": [
+            "m2"
+        ]
+    },
+    {
+        "codigo": "e7",
+        "nombre": "Pedro Gonz\u00c3\u00a1lez",
+        "sexo": "m",
+        "edad": 25,
+        "grupo": "a1",
+        "modulos": [
+            "m2"
+        ]
+    },
+    {
+        "codigo": "e8",
+        "nombre": "Luc\u00c3\u00ada M\u00c3\u00a9ndez",
+        "sexo": "f",
+        "edad": 28,
+        "grupo": "a1",
+        "modulos": [
+            "m3"
+        ]
+    },
+    {
+        "codigo": "e9",
+        "nombre": "Fernando Ruiz",
+        "sexo": "m",
+        "edad": 30,
+        "grupo": "a1",
+        "modulos": [
+            "m3"
+        ]
+    },
+    {
+        "codigo": "e10",
+        "nombre": "Isabel D\u00c3\u00adaz",
+        "sexo": "f",
+        "edad": 19,
+        "grupo": "a1",
+        "modulos": [
+            "m3"
         ]
     }
 ]

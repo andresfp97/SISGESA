@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from persistencia.persistenciaEntidades.perEstudiante import obtenerEstudiantes
 from persistencia.persistenciaEntidades.perModulo import obtenerModulos
+from consultasInformes.consultasCodigo import consultarEstudiantesEnModulo
 from persistencia.persisAsistencia.perAsistencia import cargar_asistencia, guardar_asistencia
 
 
@@ -14,11 +15,25 @@ def modulo_valido(codigo_modulo):
     modulos = obtenerModulos()
     return any(mod['codigo'] == codigo_modulo for mod in modulos)
 
+def estudiante_asignado_a_modulo(codigo_estudiante, codigo_modulo):
+    # Obtener la lista de estudiantes asignados a este módulo
+    estudiantes_modulo = consultarEstudiantesEnModulo(codigo_modulo)
+    
+    # Validar si el código del estudiante está en la lista de estudiantes
+    return codigo_estudiante in estudiantes_modulo
+
+
+
 # Función para registrar asistencia de varios estudiantes en un mismo módulo
 def tomarAsistencia():
     # Ingresar el módulo solo una vez
     codigo_modulo = input("Ingrese el código del módulo: ")
     
+    # Validar si el módulo existe
+    if not modulo_valido(codigo_modulo):
+        print(f"El módulo con código {codigo_modulo} no existe.")
+        return  # Termina la función si el módulo no existe
+
     # Obtener la fecha actual
     fecha_actual = datetime.now().strftime('%Y-%m-%d')
     
@@ -38,7 +53,7 @@ def tomarAsistencia():
 
     hora_inicio = datetime.now()
     print(f"Hora de inicio del módulo {codigo_modulo}: {hora_inicio.strftime('%Y-%m-%d %H:%M:%S')}")
-    
+
     while True:
         codigo_estudiante = input("Ingrese el código del estudiante (o 'fin' para terminar): ").strip()
         
@@ -48,6 +63,11 @@ def tomarAsistencia():
         # Validación de estudiante
         if not estudiante_valido(codigo_estudiante):
             print(f"Estudiante con código {codigo_estudiante} no encontrado.")
+            continue
+
+        # Validación si el estudiante está asignado al módulo
+        if not estudiante_asignado_a_modulo(codigo_estudiante, codigo_modulo):
+            print(f"El estudiante con código {codigo_estudiante} no está asignado al módulo {codigo_modulo}.")
             continue
 
         # Registrar la asistencia
@@ -81,6 +101,11 @@ def tomarSalida():
     # Ingresar el módulo solo una vez
     codigo_modulo = input("Ingrese el código del módulo para registrar salidas: ")
 
+    # Validar si el módulo existe
+    if not modulo_valido(codigo_modulo):
+        print(f"El módulo con código {codigo_modulo} no existe.")
+        return  # Termina la función si el módulo no existe
+
     # Obtener la fecha actual
     fecha_actual = datetime.now().strftime('%Y-%m-%d')
 
@@ -101,6 +126,11 @@ def tomarSalida():
 
         if codigo_estudiante.lower() == 'fin':
             break
+
+        # Validación si el estudiante está asignado al módulo
+        if not estudiante_asignado_a_modulo(codigo_estudiante, codigo_modulo):
+            print(f"El estudiante con código {codigo_estudiante} no está asignado al módulo {codigo_modulo}.")
+            continue
 
         # Buscar el registro de asistencia del estudiante sin salida
         asistencia_encontrada = None
@@ -123,13 +153,16 @@ def tomarSalida():
         # Confirmar registro
         print(f"Salida registrada para {codigo_estudiante}: Estado de salida - bien. Hora de salida: {hora_salida.strftime('%Y-%m-%d %H:%M:%S')}.")
 
+    # Actualizar las salidas faltantes a "antes"
+    for asistencia in asistencias[codigo_modulo][fecha_actual]:
+        if asistencia['salida'] is None:
+            asistencia['estado_salida'] = 'antes'
+            asistencia['salida'] = 'N/A'  # O puedes usar la hora de finalización predeterminada
+
     # Guardar todas las asistencias
     guardar_asistencia(asistencias)
 
-    print(f"Registro de salidas completado para el módulo {codigo_modulo} en la fecha {fecha_actual}.")
-
-
-
+    print(f"Registro de salidas completado para el módulo {codigo_modulo} en la fecha {fecha_actual}. Las salidas faltantes se han marcado como 'antes'.")
 
 def actualizar_salidas_pendientes():
     # Cargar asistencias existentes

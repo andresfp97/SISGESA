@@ -17,26 +17,26 @@ from consultasInformes.consultasCodigo import (
     consultarDocentesEnModulo,
     consultarEstudiantesPorDocenteEnModulo,
 )
-from consultasInformes.consultasAsistencia import (
+from consultasInformes.consultas import (
     estudiantes_tarde_mes,
     estudiantes_asistencia_completa_mes,
     estudiantes_retiro_antes_mes,
     porcentaje_asistencia_modulo,
 )
 
-# inicio()
-# print("\n"*13)
-# permiso = False
+inicio()
+print("\n"*13)
+permiso = False
 
-# while True:
-#     print("Usuario    --->  'admin' ")
-#     print("Contraseña --->  'SISGESA'")
-#     permiso = inicioSesion()
-#     if permiso:
-#         break
-
-# cambiar True por permiso
 while True:
+    print("Usuario y contraseña por defecto")
+    print("Usuario    --->  admin ")
+    print("Contraseña --->  SISGESA")
+    permiso = inicioSesion()
+    if permiso:
+        break
+
+while permiso:
     op = menu()
     match op:
         case 1:
@@ -123,18 +123,22 @@ while True:
                 op1 = menuconsulCodigo()
                 match op1:
                     case 1:
-                        codigoEstudiante = input("Ingrese codigo estudiante: ")
-                        consultarEstudiantesEnGrupo(codigoEstudiante)
+                        codigoGrupo = input("Ingrese codigo de grupo: ")
+                        consultarEstudiantesEnGrupo(codigoGrupo)
+                        input("Enter para continuar")
                     case 2:
-                        codigoEstudiante = input("Ingrese codigo estudiante: ")
-                        consultarEstudiantesEnModulo(codigoEstudiante)
+                        codigoModulo = input("Ingrese codigo  de modulo: ")
+                        consultarEstudiantesEnModulo(codigoModulo)
+                        input("Enter para continuar")
                     case 3:
-                        codigoModulo = input("Ingrese codigo estudiante: ")
+                        codigoModulo = input("Ingrese codigo  de modulo: ")
                         consultarDocentesEnModulo(codigoModulo)
+                        input("Enter para continuar")
                     case 4:
                         codigoDocente = input("Ingrese codigo de docente: ")
-                        codigoDocente = input("Ingrese codigo de Modulo: ")
-                        consultarEstudiantesPorDocenteEnModulo (codigoModulo)
+                        codigoModulo = input("Ingrese codigo de Modulo: ")
+                        consultarEstudiantesPorDocenteEnModulo (codigoDocente, codigoModulo)
+                        input("Enter para continuar")
                     case 5:
                         break
 
@@ -147,20 +151,25 @@ while True:
                         mes = int(input("Ingrese el mes (1-12): "))
                         anio = int(input("Ingrese el año: "))
                         estudiantes_tarde_mes(codigo_modulo, mes, anio)
+                        input("Enter para continuar")
+                        
                     case 2:
                         codigo_modulo = input("Ingrese el código del módulo: ")
                         mes = int(input("Ingrese el mes (1-12): "))
                         anio = int(input("Ingrese el año: "))
                         estudiantes_retiro_antes_mes(codigo_modulo, mes, anio)
+                        input("Enter para continuar")
                     case 3:
                         mes = int(input("Ingrese el mes (1-12): "))
                         anio = int(input("Ingrese el año: "))
                         estudiantes_asistencia_completa_mes(mes, anio)
+                        input("Enter para continuar")
                     case 4:
                         codigo_modulo = input("Ingrese el código del módulo: ")
                         mes = int(input("Ingrese el mes (1-12): "))
                         anio = int(input("Ingrese el año: "))
                         porcentaje_asistencia_modulo(codigo_modulo, mes, anio)
+                        input("Enter para continuar")
                     case 5:
                         break
         case 10:

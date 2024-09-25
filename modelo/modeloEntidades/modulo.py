@@ -27,7 +27,7 @@ def registrarModulo():
     while parar:
         profesor = registrarProfesor()
         lst.append(profesor)
-        otro = input("¿quiere ingresar otro estudiante? (s/n): ").strip().lower()
+        otro = input("¿quiere asignar otro profesor ? (s/n): ").strip().lower()
         if otro == "s":
             parar = True
         if otro == "n":

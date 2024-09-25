@@ -20,7 +20,7 @@ def menu():
 
         try:
             opcion = int(input())
-            if opcion < 1 or opcion > 9:
+            if opcion < 1 or opcion > 11:
                 print("Error. opcion no valida")
                 input("presione cualquier tecla para volver al menu")
                 continue

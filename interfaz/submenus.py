@@ -5,7 +5,7 @@ def menuAsis():
         print("")
         print("1. Asistencia de entrada ." )
         print("2. Asistencia de salida.")
-        print("3. Salida de registro de asitencia.")
+        print("3. Salir.")
         print("")
         print(">>> Seleccione la opcion ?", end="")
 

@@ -1,26 +1,73 @@
 [
     {
-        "codigo": "c4",
-        "nombre": "grupoc4",
-        "marca": "gc4",
+        "codigo": "a1",
+        "nombre": "grupo a1",
+        "marca": "ga1",
         "estudiantes": [
-            "3"
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10"
         ]
     },
     {
-        "codigo": "c5",
-        "nombre": "grupoc5",
-        "marca": "gc5",
-        "estudiantes": [
-            "2"
-        ]
+        "codigo": "a2",
+        "nombre": "grupo a2",
+        "marca": "ga2",
+        "estudiantes": []
     },
     {
-        "codigo": "c6",
-        "nombre": "grupoc6",
-        "marca": "gc5",
-        "estudiantes": [
-            "1"
-        ]
+        "codigo": "a3",
+        "nombre": "grupo a3",
+        "marca": "ga3",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a4",
+        "nombre": "grupo a4",
+        "marca": "ga4",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a5",
+        "nombre": "grupo a5",
+        "marca": "ga5",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a6",
+        "nombre": "grupo a6",
+        "marca": "ga6",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a7",
+        "nombre": "grupo a7",
+        "marca": "ga7",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a8",
+        "nombre": "grupo a8",
+        "marca": "ga8",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a9",
+        "nombre": "grupo a9",
+        "marca": "ga9",
+        "estudiantes": []
+    },
+    {
+        "codigo": "a10",
+        "nombre": "grupo a10",
+        "marca": "ga10",
+        "estudiantes": []
     }
 ]
