@@ -174,6 +174,7 @@ while permiso:
                         break
         case 10:
             cambiarContrasena()
+            input("Enter para continuar")
         case 11:
             fin()
             break

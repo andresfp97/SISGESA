@@ -8,7 +8,7 @@ def cambiarContrasena():
     # Cargar las credenciales del JSON
     credenciales = cargarDatosLogin()
 
-    usuIngre = leerUsuario()
+    usuIngre = input("ingrese el usuario --> admin: ")
 
     # Verificamos si el usuario existe
     for codigo, datos in credenciales.items():
