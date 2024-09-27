@@ -1,7 +1,5 @@
-from persistencia.persistenciaEntidades.perModulo import guardarModulo
+from persistencia.persistenciaEntidades.perEntidad import guardarDatos
 from utils.validacion import leerUsuario, leerCodigo
-from persistencia.persistenciaEntidades.perProfesor import obtenerProfesor
-from modelo.modeloEntidades.profesor import registrarProfesor
 
 def leerDuracionSemanas():
     while True:
@@ -14,6 +12,7 @@ def leerDuracionSemanas():
 
         except ValueError:
             print("Error. duracion invalido.\n")
+            
 
 def registrarModulo():
     
@@ -21,25 +20,15 @@ def registrarModulo():
     codigo = leerCodigo()
     nombre = leerUsuario()
     duraSemanas = leerDuracionSemanas()
-    
-    parar = True
-    lst = []
-    while parar:
-        profesor = registrarProfesor()
-        lst.append(profesor)
-        otro = input("¿quiere asignar otro profesor ? (s/n): ").strip().lower()
-        if otro == "s":
-            parar = True
-        if otro == "n":
-             parar = False
+   
     modulo = {
         'codigo': codigo,
         'nombre': nombre,
         'duracionSemanas': duraSemanas,
         'estudiantes': [],
-        'profesores': lst    
+        'profesores': []    
     }
 
     # Guardar modulo
-    guardarModulo(modulo)
+    guardarDatos(modulo, "modulos")
     print(f"Modulo  '{nombre}' registrado exitosamente.")

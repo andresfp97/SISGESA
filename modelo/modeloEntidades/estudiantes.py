@@ -1,4 +1,4 @@
-from persistencia.persistenciaEntidades.perEstudiante import guardarEstudiante
+from persistencia.persistenciaEntidades.perEntidad import guardarDatos
 from utils.validacion import leerUsuario, leerCodigo, leerEdad, leerSexo
 
 def registrarEstudiante():
@@ -20,7 +20,7 @@ def registrarEstudiante():
         'modulos': []
         
     }
-
+    
     # Guardar estudiante
-    guardarEstudiante(estudiante)
-    print(f"Estudiante '{nombre}' registrado exitosamente.")
+    guardarDatos(estudiante, "estudiantes" )
+    

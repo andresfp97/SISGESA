@@ -1,51 +1,13 @@
 [
     {
         "codigo": "m1",
-        "nombre": "fundamentos programacion",
+        "nombre": "fundamentos de programacion",
         "duracionSemanas": 4,
         "estudiantes": [
-            "e1",
-            "e2",
-            "e3"
+            "e1"
         ],
         "profesores": [
-            {
-                "codigo": "1",
-                "nombre": "marcela perez"
-            }
-        ]
-    },
-    {
-        "codigo": "m2",
-        "nombre": "python",
-        "duracionSemanas": 4,
-        "estudiantes": [
-            "e4",
-            "e5",
-            "e6",
-            "e7"
-        ],
-        "profesores": [
-            {
-                "codigo": "11",
-                "nombre": "juan lopez"
-            }
-        ]
-    },
-    {
-        "codigo": "m3",
-        "nombre": "ingles basico",
-        "duracionSemanas": 10,
-        "estudiantes": [
-            "e8",
-            "e9",
-            "e10"
-        ],
-        "profesores": [
-            {
-                "codigo": "12",
-                "nombre": "jesi jaimes"
-            }
+            "123"
         ]
     }
 ]

@@ -1,4 +1,4 @@
-from persistencia.persistenciaEntidades.perGrupo import guardarGrupo
+from persistencia.persistenciaEntidades.perEntidad import guardarDatos
 from utils.validacion import leerUsuario, leerCodigo
 
 def leerMarca():
@@ -30,5 +30,4 @@ def registrarGrupo():
     }
 
     # Guardar grupo
-    guardarGrupo(grupo)
-    print(f"Grupo '{nombre}' registrado exitosamente.")
+    guardarDatos(grupo, "grupos")

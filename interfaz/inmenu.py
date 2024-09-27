@@ -10,17 +10,18 @@ def menu():
         print("4. Registro de docentes. " )
         print("5. Asignacion de estudiantes a grupos." )
         print("6. Asignacion de estudiantes a modulos ." )
-        print("7. Registro de asistencia ." )
-        print("8. Consultas de información." )
-        print("9. Generación de informes. " )
-        print("10. Cambio de contraseña. " )
-        print("11. Salida del sistema.")
+        print("7. Asignacion de profesores a modulos ." )
+        print("8. Registro de asistencia ." )
+        print("9. Consultas de información." )
+        print("10. Generación de informes. " )
+        print("11. Cambio de contraseña. " )
+        print("12. Salida del sistema.")
         print("")
         print(">>> Seleccione la opcion ?", end="")
 
         try:
             opcion = int(input())
-            if opcion < 1 or opcion > 11:
+            if opcion < 1 or opcion > 12:
                 print("Error. opcion no valida")
                 input("presione cualquier tecla para volver al menu")
                 continue

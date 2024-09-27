@@ -10,6 +10,8 @@ from modelo.modeloEntidades.estudiantes import registrarEstudiante
 from modelo.modeloEntidades.profesor import registrarProfesor
 from modelo.modeloAsignar.estudianteGrupo import asignarEstudianteGrupo
 from modelo.modeloAsignar.estudianteModulo import asignarEstudianteModulo
+from modelo.modeloAsignar.profesorModulo import asignarProfesorModulo
+
 from modelo.modeloAsistencia.asistencia import tomarAsistencia, tomarSalida
 from consultasInformes.consultasCodigo import (
     consultarEstudiantesEnGrupo,
@@ -109,6 +111,21 @@ while permiso:
                 elif otro == "n":
                     p = False
         case 7:
+            p = True
+            while p:
+                codProfesor = input("ingrese el codigo del profesor: ")
+                codModulo = input("ingrese el codigo del modulo: ")
+                asignarProfesorModulo(codProfesor, codModulo)
+                otro = (
+                    input("¿quiere asignar otro Profesor a modulo? (s/n): ")
+                    .strip()
+                    .lower()
+                )
+                if otro == "y":
+                    p = True
+                elif otro == "n":
+                    p = False
+        case 8:
             while True:
                 op1 = menuAsis()
                 match op1:
@@ -118,7 +135,7 @@ while permiso:
                         tomarSalida()
                     case 3:
                         break
-        case 8:
+        case 9:
             while True:
                 op1 = menuconsulCodigo()
                 match op1:
@@ -142,7 +159,7 @@ while permiso:
                     case 5:
                         break
 
-        case 9:
+        case 10:
             while True:
                 op1 = menuconsulAsis()
                 match op1:
@@ -172,9 +189,9 @@ while permiso:
                         input("Enter para continuar")
                     case 5:
                         break
-        case 10:
+        case 11:
             cambiarContrasena()
             input("Enter para continuar")
-        case 11:
+        case 12:
             fin()
             break

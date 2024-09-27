@@ -1,18 +1,17 @@
 from datetime import datetime, timedelta
-from persistencia.persistenciaEntidades.perEstudiante import obtenerEstudiantes
-from persistencia.persistenciaEntidades.perModulo import obtenerModulos
+from persistencia.persistenciaEntidades.perEntidad import obtenerDatos
 from consultasInformes.consultasCodigo import consultarEstudiantesEnModulo
 from persistencia.persisAsistencia.perAsistencia import cargar_asistencia, guardar_asistencia
 
 
 # Función para validar si un estudiante está registrado
 def estudiante_valido(codigo_estudiante):
-    estudiantes = obtenerEstudiantes()
+    estudiantes = obtenerDatos("estudiantes")
     return any(est['codigo'] == codigo_estudiante for est in estudiantes)
 
 # Función para validar si un módulo está registrado
 def modulo_valido(codigo_modulo):
-    modulos = obtenerModulos()
+    modulos = obtenerDatos("modulos")
     return any(mod['codigo'] == codigo_modulo for mod in modulos)
 
 def estudiante_asignado_a_modulo(codigo_estudiante, codigo_modulo):

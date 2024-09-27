@@ -12,5 +12,5 @@ def inicio():
     """
     print(Acme_ascii)
     print("="*55)
-    input( "pulse  enter para iniciar sesion:")
+    input( "Pulse  enter para ir a iniciar sesion")
     

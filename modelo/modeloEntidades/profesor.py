@@ -1,4 +1,4 @@
-from persistencia.persistenciaEntidades.perProfesor import guardarProfesor
+from persistencia.persistenciaEntidades.perEntidad import guardarDatos
 from utils.validacion import leerUsuario, leerCodigo
 
 def registrarProfesor():
@@ -14,6 +14,6 @@ def registrarProfesor():
     }
         
     # Guardar estudante
-    guardarProfesor(profesor)
+    guardarDatos(profesor, "profesores")
     print(f"Profesor '{nombre}' registrado exitosamente.")
     return profesor
